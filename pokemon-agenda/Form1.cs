@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace pokemon_agenda
 {
     public partial class FmCadastroPokemon : Form
-    {
+    { 
         public FmCadastroPokemon()
         {
             InitializeComponent();
@@ -24,18 +24,21 @@ namespace pokemon_agenda
             cbTipo.SelectedIndex = -1;
             numNivel.Value = 1;
 
-
             txtNome.Focus();
         }
-
+    
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             string nomePokemon = txtNome.Text; //textBox
             string tipoPokemon = cbTipo.Text; //comboBox
             int nivelPokemon =  (int)numNivel.Value; //numericUpDown
 
-            MessageBox.Show($"o Pokémon {nomePokemon} do tipo {tipoPokemon} " +
-                $"foi cadastrado com o nivel {nivelPokemon}");
+            Pokemon poke = new Pokemon(nomePokemon, tipoPokemon, nivelPokemon);
+
+            poke.fnDescricao();
+            
+            //MessageBox.Show($"o Pokémon {nomePokemon} do tipo {tipoPokemon} " +
+              // $"foi cadastrado com o nivel {nivelPokemon}");
 
             fnLimpar();
         }
@@ -43,6 +46,11 @@ namespace pokemon_agenda
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             fnLimpar();
+        }
+
+        private void btnAjuda_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
