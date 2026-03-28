@@ -190,7 +190,7 @@
             // 
             // btnAjuda
             // 
-            this.btnAjuda.Location = new System.Drawing.Point(24, 389);
+            this.btnAjuda.Location = new System.Drawing.Point(13, 415);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Size = new System.Drawing.Size(75, 23);
             this.btnAjuda.TabIndex = 3;
