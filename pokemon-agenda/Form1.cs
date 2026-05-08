@@ -36,11 +36,9 @@ namespace pokemon_agenda
             Pokemon poke = new Pokemon(nomePokemon, tipoPokemon, nivelPokemon);
 
             poke.fnDescricao();
-            
-            //MessageBox.Show($"o Pokémon {nomePokemon} do tipo {tipoPokemon} " +
-              // $"foi cadastrado com o nivel {nivelPokemon}");
 
-            fnLimpar();
+            MessageBox.Show($"o Pokémon {nomePokemon} do tipo {tipoPokemon} " +
+              $"foi cadastrado com o nivel {nivelPokemon}");
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
